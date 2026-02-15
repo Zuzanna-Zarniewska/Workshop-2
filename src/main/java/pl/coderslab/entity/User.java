@@ -10,7 +10,7 @@ public class User {
         return id;
     }
 
-    private void setId(int id) {
+    protected void setId(int id) {
         this.id = id;
     }
 
@@ -18,7 +18,7 @@ public class User {
         return userName;
     }
 
-    private void setUserName(String userName) {
+    protected void setUserName(String userName) {
         this.userName = userName;
     }
 
@@ -26,7 +26,7 @@ public class User {
         return email;
     }
 
-    private void setEmail(String email) {
+    protected void setEmail(String email) {
         this.email = email;
     }
 
@@ -34,7 +34,40 @@ public class User {
         return password;
     }
 
-    private void setPassword(String password) {
+    protected void setPassword(String password) {
         this.password = password;
+    }
+
+    public User(String userName, String email, String password) {
+        setUserName(userName);
+        setEmail(email);
+        setPassword(password);
+    }
+
+    protected User(int id, String userName, String email, String password){
+        setId(id);
+        setUserName(userName);
+        setEmail(email);
+        setPassword(password);
+    }
+
+    public User(String[] parameters) {
+        setId(Integer.parseInt(parameters[0]));
+        setUserName(parameters[1]);
+        setEmail(parameters[2]);
+        setPassword(parameters[3]);
+    }
+
+    public void printInfo() {
+        System.out.println("ID: " + getId());
+        System.out.println("Username: " + getUserName());
+        System.out.println("E-mail: " + getEmail());
+        System.out.println("Password: " + getPassword());
+    }
+
+    public void changeData(String userName, String email, String password){
+        this.setUserName(userName);
+        this.setEmail(email);
+        this.setPassword(password);
     }
 }

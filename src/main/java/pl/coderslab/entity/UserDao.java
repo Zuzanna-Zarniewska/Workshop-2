@@ -104,7 +104,7 @@ public class UserDao {
 
             String[] userParameters = new String[userAttributeNames.length];
             while (rs.next()) {
-                for (int i=0; i < userAttributeNames.length; i++){
+                for (int i = 0; i < userAttributeNames.length; i++) {
                     userParameters[i] = rs.getString(userAttributeNames[i].getName());
                 }
                 allUsers = addToArray(allUsers, new User(userParameters));

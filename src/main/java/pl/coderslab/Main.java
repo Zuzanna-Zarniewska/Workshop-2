@@ -16,7 +16,7 @@ public class Main {
         userRead.printInfo();
         userRead.changeData("newUser", "newuser@mail.com", "newPassword");
         dao.update(userRead);
-        dao.delete(19);
+//        dao.delete(19);
 
         User[] allUsers = dao.findAll();
         System.out.println();

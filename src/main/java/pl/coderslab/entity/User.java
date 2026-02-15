@@ -44,13 +44,6 @@ public class User {
         setPassword(password);
     }
 
-    protected User(int id, String userName, String email, String password){
-        setId(id);
-        setUserName(userName);
-        setEmail(email);
-        setPassword(password);
-    }
-
     public User(String[] parameters) {
         setId(Integer.parseInt(parameters[0]));
         setUserName(parameters[1]);
@@ -65,7 +58,7 @@ public class User {
         System.out.println("Password: " + getPassword());
     }
 
-    public void changeData(String userName, String email, String password){
+    public void changeData(String userName, String email, String password) {
         this.setUserName(userName);
         this.setEmail(email);
         this.setPassword(password);

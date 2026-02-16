@@ -12,14 +12,18 @@ public class Main {
 //        User u4 = dao.create(new User("user4", "user4@gmail.com", "password4"));
 //        User u5 = dao.create(new User("user5", "user5@gmail.com", "password5"));
 
-        User userRead = dao.read(18);
+        User userRead = dao.read(23);
         userRead.printInfo();
-        userRead.changeData("newUser", "newuser@mail.com", "newPassword");
+        userRead.setUserName("newUser");
+        userRead.setEmail("newuser@mail.com");
+        userRead.setPassword("newPassword");
         dao.update(userRead);
-//        dao.delete(19);
+//        dao.delete(24);
 
         User[] allUsers = dao.findAll();
         System.out.println();
-        for (User user : allUsers) user.printInfo();
+        for (User user : allUsers) {
+            user.printInfo();
+        }
     }
 }

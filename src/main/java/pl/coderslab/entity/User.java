@@ -18,7 +18,7 @@ public class User {
         return userName;
     }
 
-    protected void setUserName(String userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
@@ -26,7 +26,7 @@ public class User {
         return email;
     }
 
-    protected void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -34,7 +34,7 @@ public class User {
         return password;
     }
 
-    protected void setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -58,9 +58,4 @@ public class User {
         System.out.println("Password: " + getPassword());
     }
 
-    public void changeData(String userName, String email, String password) {
-        this.setUserName(userName);
-        this.setEmail(email);
-        this.setPassword(password);
-    }
 }
